@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenCrypt</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="theme-switcher">
+    <button id="themeBtn" aria-label="Toggle theme">
+      <span id="themeIcon" aria-hidden="true">🌙</span>
+    </button>
+  </div>
+  <main class="container">
+    <!-- Home Section -->
+    <section id="home-section" class="active-section">
+      <h2>Welcome to GreenCrypt 👋</h2>
+      <p>
+        This is a simple web app for encryption and decryption using various algorithms.<br>
+        Choose an algorithm below to get started.
+      </p>
+      <div class="menu-buttons">
+        <button class="menu-btn" data-target="aes-section">AES</button>
+        <button class="menu-btn" data-target="des-section">DES</button>
+        <button class="menu-btn" data-target="tripledes-section">TripleDES</button>
+        <button class="menu-btn" data-target="rc4-section">RC4</button>
+        <button class="menu-btn" data-target="rabbit-section">Rabbit</button>
+        <button class="menu-btn" data-target="base64-section">Base64</button>
+        <button class="menu-btn" data-target="hex-section">Hex</button>
+        <button class="menu-btn" data-target="sha256-section">SHA256</button>
+        <button class="menu-btn" data-target="sha1-section">SHA1</button>
+        <button class="menu-btn" data-target="md5-section">MD5</button>
+      </div>
+    </section>
+    <!-- AES Section -->
+    <section id="aes-section" class="hidden-section">
+      <h2>AES Encryption & Decryption</h2>
+      <textarea id="aes-input" placeholder="Enter text here"></textarea>
+      <input id="aes-key" type="text" placeholder="Enter key">
+      <div class="buttons">
+        <button id="encryptAESBtn">Encrypt 🔒</button>
+        <button id="decryptAESBtn">Decrypt 🔓</button>
+      </div>
+      <textarea id="aes-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- DES Section -->
+    <section id="des-section" class="hidden-section">
+      <h2>DES Encryption & Decryption</h2>
+      <textarea id="des-input" placeholder="Enter text here"></textarea>
+      <input id="des-key" type="text" placeholder="Enter key">
+      <div class="buttons">
+        <button id="encryptDESBtn">Encrypt 🔒</button>
+        <button id="decryptDESBtn">Decrypt 🔓</button>
+      </div>
+      <textarea id="des-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- TripleDES Section -->
+    <section id="tripledes-section" class="hidden-section">
+      <h2>TripleDES Encryption & Decryption</h2>
+      <textarea id="tripledes-input" placeholder="Enter text here"></textarea>
+      <input id="tripledes-key" type="text" placeholder="Enter key">
+      <div class="buttons">
+        <button id="encryptTripleDESBtn">Encrypt 🔒</button>
+        <button id="decryptTripleDESBtn">Decrypt 🔓</button>
+      </div>
+      <textarea id="tripledes-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- RC4 Section -->
+    <section id="rc4-section" class="hidden-section">
+      <h2>RC4 Encryption & Decryption</h2>
+      <textarea id="rc4-input" placeholder="Enter text here"></textarea>
+      <input id="rc4-key" type="text" placeholder="Enter key">
+      <div class="buttons">
+        <button id="encryptRC4Btn">Encrypt 🔒</button>
+        <button id="decryptRC4Btn">Decrypt 🔓</button>
+      </div>
+      <textarea id="rc4-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- Rabbit Section -->
+    <section id="rabbit-section" class="hidden-section">
+      <h2>Rabbit Encryption & Decryption</h2>
+      <textarea id="rabbit-input" placeholder="Enter text here"></textarea>
+      <input id="rabbit-key" type="text" placeholder="Enter key">
+      <div class="buttons">
+        <button id="encryptRabbitBtn">Encrypt 🔒</button>
+        <button id="decryptRabbitBtn">Decrypt 🔓</button>
+      </div>
+      <textarea id="rabbit-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- Base64 Section -->
+    <section id="base64-section" class="hidden-section">
+      <h2>Base64 Encode & Decode</h2>
+      <textarea id="base64-input" placeholder="Enter text here"></textarea>
+      <div class="buttons">
+        <button id="encodeBase64Btn">Encode 🔒</button>
+        <button id="decodeBase64Btn">Decode 🔓</button>
+      </div>
+      <textarea id="base64-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- Hex Section -->
+    <section id="hex-section" class="hidden-section">
+      <h2>Hex Encode & Decode</h2>
+      <textarea id="hex-input" placeholder="Enter text here"></textarea>
+      <div class="buttons">
+        <button id="encodeHexBtn">Encode 🔒</button>
+        <button id="decodeHexBtn">Decode 🔓</button>
+      </div>
+      <textarea id="hex-output" placeholder="Result..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- SHA256 Section -->
+    <section id="sha256-section" class="hidden-section">
+      <h2>SHA256 Hash</h2>
+      <textarea id="sha256-input" placeholder="Enter text here"></textarea>
+      <div class="buttons">
+        <button id="hashSHA256Btn">Hash #️⃣</button>
+      </div>
+      <textarea id="sha256-output" placeholder="Hash..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- SHA1 Section -->
+    <section id="sha1-section" class="hidden-section">
+      <h2>SHA1 Hash</h2>
+      <textarea id="sha1-input" placeholder="Enter text here"></textarea>
+      <div class="buttons">
+        <button id="hashSHA1Btn">Hash #️⃣</button>
+      </div>
+      <textarea id="sha1-output" placeholder="Hash..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+    <!-- MD5 Section -->
+    <section id="md5-section" class="hidden-section">
+      <h2>MD5 Hash</h2>
+      <textarea id="md5-input" placeholder="Enter text here"></textarea>
+      <div class="buttons">
+        <button id="hashMD5Btn">Hash #️⃣</button>
+      </div>
+      <textarea id="md5-output" placeholder="Hash..." readonly></textarea>
+      <button class="back-btn">Back to Home</button>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
